@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Dashboard | JAM'S CUISINE</title>
+
+  <!-- ✅ Load CSS correctly from Flask static folder -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ Load JavaScript correctly from Flask static folder -->
+  <script src="script.js" defer></script>
+  <!-- Optional: Keep Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-body">
+  <header class="site-header">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-mark">JAM'S CUISINE</div>
+        <div class="brand-sub">Authentic Filipino Dishes</div>
+      </div>
+
+      <!-- ✅ Flask navigation links -->
+      <nav>
+        <a href="index.html">Home</a>
+    <a href="signaturedish.html">Signature Dish</a>
+    <a href="orders.html">Orders</a>
+    <a href="promos.html">Promos</a>
+    <a href="inventory.html" class="active">Inventory</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <h1 class="page-title">Inventory Dashboard</h1>
+
+    <div class="page-actions">
+      <select class="pill">
+        <option>All Items</option>
+        <option>Low Stock</option>
+        <option>Out of Stock</option>
+      </select>
+      <button class="btn secondary">+ Add Item</button>
+    </div>
+
+    <table class="inventory-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Stock</th>
+          <th>Restock Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pork Knuckles</td>
+          <td><span class="stock-ok">15 pcs</span></td>
+          <td>Oct 14</td>
+        </tr>
+        <tr>
+          <td>Soy Sauce</td>
+          <td><span class="stock-ok">20 bottles</span></td>
+          <td>Oct 15</td>
+        </tr>
+        <tr>
+          <td>Calamansi Juice</td>
+          <td><span class="stock-low">Low</span></td>
+          <td>Oct 13</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="site-footer">© 2025 JAM'S CUISINE</footer>
+</body>
+</html>

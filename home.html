@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAM'S CUISINE - Admin</title>
+
+    <!-- ✅ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Flask-linked CSS (instead of styles.css) -->
+    <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+    <style>
+      /* Keep your existing inline adjustments */
+      .home-hero {
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+      }
+      .home-container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+      }
+      .home-hero-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+      .home-hero-left h1,
+      .home-hero-left .home-sub {
+        flex-shrink: 0;
+        margin-bottom: 10px;
+        padding-right: 0;
+      }
+      .home-collage {
+        flex: 1;
+        display: flex;
+        width: 100% !important;
+        justify-content: space-between;
+        gap: 2px;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-height: 400px;
+        overflow: hidden;
+      }
+      .home-collage img {
+        flex: 1;
+        min-width: 0;
+        height: 100%;
+        width: auto;
+        max-width: none;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-right: 0;
+        max-height: 400px;
+      }
+      .home-feature {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="home-body">
+    <header class="home-header">
+      <div class="home-container home-nav">
+        <div class="home-logo">
+          <div class="home-logo-title">JAM'S CUISINE</div>
+          <div class="home-logo-sub">Est. 2025</div>
+        </div>
+
+        <!-- ✅ Flask Navigation Bar -->
+        <nav>
+          <a href="index.html" class="active">Home</a>
+    <a href="signaturedish.html">Signature Dish</a>
+    <a href="orders.html">Orders</a>
+    <a href="promos.html">Promos</a>
+    <a href="inventory.html">Inventory</a>
+        </nav>
+
+        <div class="home-actions">
+          <button class="icon-btn" aria-label="Grid view">⧉</button>
+          <div class="home-avatar" aria-label="User"></div>
+        </div>
+      </div>
+
+      <div class="home-container home-categories">
+        <button class="chip">Signature Dish</button>
+        <button class="chip">Combo Meals</button>
+        <button class="chip">Appetizer</button>
+        <button class="chip">Desserts</button>
+        <button class="chip">Beverages</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="home-hero home-container">
+        <div class="home-hero-left">
+          <h1 class="home-title">JAM'S CUISINE</h1>
+          <div class="home-sub">Est. 2025</div>
+          <div class="home-collage">
+            <img src="https://www.bing.com/th?id=OSK.9c9763ecd0e14e1bde8375da631be745" alt="Adobo" />
+            <img src="https://img.freepik.com/premium-photo/picture-sinigang_871710-20428.jpg" alt="Sinigang" />
+            <img src="https://4.bp.blogspot.com/-qJXQAnsPvV8/UjiKdyXi4SI/AAAAAAAAACw/kOdOWS9Om0k/s1600/lechon-kawali.jpg" alt="Lechon Kawali" />
+            <img src="http://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/sea/philippines/acm/recipe/2023/grilled-boneless-bangus-with-green-tomato-salad/inihaw-na-bangus-grilled-boneless-bangus-preview.jpg" alt="Grilled Bangus" />
+            <img src="https://i2.wp.com/www.angsarap.net/wp-content/uploads/2017/02/Pinakbet-Wide.jpg" alt="Pinakbet" />
+            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/newscms/2021_20/1720384/chicken-inasal-main-khu-210521.jpg" alt="Chicken Inasal" />
+          </div>
+        </div>
+      </section>
+
+      <section class="home-container home-grid" aria-label="Popular Dishes">
+        <!-- Dish Cards -->
+        <article class="dish-card">
+          <img src="https://www.bing.com/th?id=OSK.9c9763ecd0e14e1bde8375da631be745" alt="Adobo" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Adobo</h3>
+              <p>Savory braised meat with soy, vinegar, and garlic.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱350</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="https://img.freepik.com/premium-photo/picture-sinigang_871710-20428.jpg" alt="Sinigang" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Sinigang</h3>
+              <p>Sour tamarind soup with seasonal vegetables.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱400</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/red-meats-&-red-meat-dishes/kare-kare/kare-kare-main.jpg" alt="Kare-Kare" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Kare-Kare</h3>
+              <p>Peanut stew with tender beef and vegetables.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱450</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="https://4.bp.blogspot.com/-qJXQAnsPvV8/UjiKdyXi4SI/AAAAAAAAACw/kOdOWS9Om0k/s1600/lechon-kawali.jpg" alt="Lechon Kawali" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Lechon Kawali</h3>
+              <p>Crispy pork belly with crackling skin.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱500</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="http://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/sea/philippines/acm/recipe/2023/grilled-boneless-bangus-with-green-tomato-salad/inihaw-na-bangus-grilled-boneless-bangus-preview.jpg" alt="Grilled Bangus" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Grilled Bangus</h3>
+              <p>Marinated milkfish grilled to perfection.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱380</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="https://i2.wp.com/www.angsarap.net/wp-content/uploads/2017/02/Pinakbet-Wide.jpg" alt="Pinakbet" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Pinakbet</h3>
+              <p>Mixed vegetables sautéed in shrimp paste.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱320</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/newscms/2021_20/1720384/chicken-inasal-main-khu-210521.jpg" alt="Chicken Inasal" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Chicken Inasal</h3>
+              <p>Grilled chicken with calamansi and annatto.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱400</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img src="http://www.angsarap.net/wp-content/uploads/2016/04/Crispy-Pata-Deep-Fried-Wide.jpg" alt="Crispy Pata" />
+          <div class="dish-body">
+            <div class="dish-info admin-theme-bg">
+              <h3>Crispy Pata</h3>
+              <p>Golden crispy pork knuckles served hot.</p>
+            </div>
+            <div class="dish-actions">
+              <span class="price">₱750</span>
+              <button class="view-btn" aria-label="View details">View</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- ✅ Flask-linked JS -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </body>
+</html>
